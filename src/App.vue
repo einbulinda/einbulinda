@@ -1,30 +1,39 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+  <NavbarMenu />
+  <router-view />
 </template>
 
+<script>
+import NavbarMenu from "@/components/NavbarMenu.vue";
+
+export default {
+  components: { NavbarMenu },
+};
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #eee;
 }
-
-#nav {
-  padding: 30px;
+a {
+  text-decoration: none;
+  color: #eee;
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+html {
+  font-size: 10px;
+  font-family: "Roboto Cn", sans-serif;
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+body {
+  height: 100vh;
+  background: linear-gradient(
+      to top right,
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("./assets/einbulinda2e.png") center no-repeat;
+  background-size: cover;
 }
 </style>
